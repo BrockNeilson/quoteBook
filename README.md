@@ -53,7 +53,7 @@ Notice we didn't put our quotes array directly on 'this' or your object you're g
 * Now that we have our data, let's set up ways to access that data.
 * Create three methods on your 'this' (service) or custom object (factory), one called getData, one called addData, and one called removeData
 * getData simply returns the quotes array
-* addData takes in a data object, verifies that data object has the proper keys (just text and author), then adds that object to the end of the quotes array
+* addData takes in a **data object**, verifies that data object has the proper **keys** (just text and author), then adds that object to the end of the quotes array
 * removeData takes in the text of a quote, loops through the quotes array, then removes the proper quote from the array. 
 
 Once you finish those methods, this service should be complete. Now notice how all the heavy logic is contained in this one service which we can inject into any controller we create. This makes things very modular and testable.
