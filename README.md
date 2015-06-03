@@ -70,6 +70,5 @@ Now that your service is set up, let's inject your service in to your controller
 * Once you've finished, add some ng-shows to 'toggle' the input boxes for add, remove, and filter making sure you only show one at a time.
 
 ##Step 5: Persist your Quotes as a cookie in your browser
-* Look up how to use $cookieStore and the $cookieStore API - https://docs.angularjs.org/api/ngCookies/service/$cookieStore
-* Now instead of just pushing or splicing your quotes out of the array, use $cookieStore to persist that data as a cookie in your browser.
+* Use JSON.stringify and JSON.parse to store the quotes object in your browser's local storage.
 
