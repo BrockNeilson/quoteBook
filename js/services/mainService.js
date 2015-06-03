@@ -16,7 +16,7 @@ app.service('mainService', function(){
 
 	this.removeData = function(text){
 		for(var i = 0; i < quotes.length; i++){
-			if(quotes[i] === text){
+			if(quotes[i].text === text){
 				quotes.splice(i,1);
 			}
 		}

@@ -31,3 +31,8 @@ body, html {
 	margin: 10px;
 }
 
+.quote-item {
+	text-align: left;
+	font-size: 1.6em;
+}
+
