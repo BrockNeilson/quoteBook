@@ -3,33 +3,43 @@
 <head>
 	<title>QUOTEBOOK YO</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<!-- BOOTSTRAP CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 
 <body>
+	<div class="nav-bar">
+		<h1 class="nav-title">QUOTEBOOK</h1>
+	</div>
+
 	<div ng-controller="mainCtrl">
+
+		<!-- Buttons -->
 		<div class="buttons">
-			<button ng-click="showAdd()">Add Quote</button>
-			<button ng-click="showRemove();">Remove Quote</button>
-			<button ng-click="showFilter();">Filter Quotes</button>
+			<button type="button" class="btn btn-primary" ng-click="showAdd()">Add Quote</button>
+			<button type="button" class="btn btn-primary" ng-click="showRemove();">Remove Quote</button>
+			<button type="button" class="btn btn-primary" ng-click="showFilter();">Filter Quotes</button>
 		</div>
 
+		<!-- Shown only on button click -->
 		<div class="inputs" ng-show="showAdds">
 			<input ng-model="quoteAdd" placeholder="Quote">
 			<input placeholder="Author" ng-model="authorAdd"/>
-			<button ng-click="addData();">ADD</button>
+			<button type="button" class="btn btn-success" ng-click="addData();">ADD</button>
 		</div>
 
 		<div class="inputs" ng-show="showRemoves">
 			<input ng-model="quoteRemove" placeholder="Quote to Remove">
-			<button ng-click="removeData();">DELETE</button>
+			<button type="button" class="btn btn-danger" ng-click="removeData();">DELETE</button>
 		</div>
 
 		<div class="inputs" ng-show="showFilters">
 			<input ng-model="quoteFilter" placeholder="Quote">
 		</div>
 
-		<ul>
-			<li ng-repeat="quote in quotes | filter: quoteFilter">"{{quote.text}}" -{{quote.author}}</li>
+		<!-- Repeating through Quotes array -->
+		<ul class="quotes">
+			<li class="quote-item" ng-repeat="quote in quotes | filter: quoteFilter">"{{quote.text}}" -{{quote.author}}</li>
 		</ul>
 	</div>
 
