@@ -31,10 +31,13 @@ app.controller('mainCtrl', function($scope, mainService){
 
 	$scope.addData = function(){
 		mainService.addData($scope.quoteAdd, $scope.authorAdd);
+		$scope.quoteAdd = '';
+		$scope.authorAdd = '';
 	};
 
 	$scope.removeData = function(){
 		mainService.removeData($scope.quoteRemove);
+		$scope.quoteRemove = '';
 	};
 
 });
